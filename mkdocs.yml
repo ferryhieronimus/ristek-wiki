@@ -1,5 +1,5 @@
 site_name: RISTEK WIKI
-site_dir: site
+site_dir: static
 site_url: !ENV BASE_URL
 repo_url: https://github.com/RistekCSUI/wiki
 

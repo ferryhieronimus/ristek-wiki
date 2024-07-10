@@ -92,7 +92,7 @@ async def auth_google(code: str):
         )
 
         # redirect to the docs homepage
-        homepage_url = f"{BASE_URL}/docs/"
+        homepage_url = f"{BASE_URL}/static/"
         response = RedirectResponse(url=homepage_url)
         response.set_cookie(key="token", value=jwt_token, httponly=True)
 
@@ -142,9 +142,9 @@ class ProtectStaticFiles(StaticFiles):
 
 # html=True to serve index.html files without to append /<markdown-filename>.html to the url
 app.mount(
-    "/docs",
+    "/static",
     ProtectStaticFiles(
-        directory="site", html=True
+        directory="static", html=True
     ),
     name="Mkdocs Generated HTMLs",
 )
