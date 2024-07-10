@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    container_name: ristek-wiki-staging
+    build:
+      context: .
+      dockerfile: ./Dockerfile.staging
+    ports:
+      - "8000:8000"
+    volumes:
+      - "${PWD}:/docs"

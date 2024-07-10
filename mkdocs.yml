@@ -1,0 +1,20 @@
+site_name: RISTEK WIKI
+site_dir: site
+site_url: !ENV BASE_URL
+repo_url: https://github.com/RistekCSUI/wiki
+
+docs_dir: docs
+
+theme:
+  name: material
+  favicon: img/favicon.ico
+  logo: img/ristek.png
+  palette:
+    primary: custom
+    accent: deep purple
+  plugins:
+    - search
+    - offline
+
+extra_css:
+  - stylesheets/extra.css
